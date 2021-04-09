@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="BBQ.css">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apache-arrow@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/arquero@latest"></script>
+  <script src="BBQ.js"></script>
+
+</head>
+<body onload="go_bbq()">
+  <div id="bbq_everything">
+    <p id='bbq_title'>BBQ</p>
+    <p id='bbq_about' onclick="toggle_about()">ABOUT</p>
+    <canvas id="bbq_canvas" width="1200" height="750"></canvas>
+    <svg id="bbq_svg" width="1200" height="600"></svg>
+    <svg id="bbq_svg2" width="1200" height="150"></svg>
+    <div id="bbq_about_div">
+      <div id="about_x_out" onclick="toggle_about()">X</div>
+      <h2>BBQ stuff</h2>
+      <p>
+        Brushing: click and drag to highlight points, hold CMD while brushing to add to your selected area. 
+        Genotype plot at the bottom: blue line is average of all segregants, black line of selected segregants. 
+        You can click on the genotype plot to leave a marker, CMD-click to undo them.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
